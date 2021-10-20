@@ -1,67 +1,75 @@
 <h1 class="text-center pt-4">MIS TRABAJOS</h1>
 <p class="paragraph-1">Una muestra de los trabajos realizados</p>
-<div class="row">
+<div class="row d-flex justify-content-center">
     <!--menu filter-->
-    <div>
-        <button class="btn btn-default filter-button" data-filter="all">Todos</button>
-        <button class="btn btn-default filter-button" data-filter="wordpress">Wordpress</button>
-        <button class="btn btn-default filter-button" data-filter="prestashop">Prestashop</button>
-        <button class="btn btn-default filter-button" data-filter="angular">Angular</button>
-        <button class="btn btn-default filter-button" data-filter="maquetacion">Maquetación</button>
+    
+    <div class="btn-group w-50 " role="group" aria-label="Trabajos realizados" (click)="onButtonGroupClick($event)">
+        <button class="btn btn-primary filter-button" data-filter="all">Todos</button>
+        <button class="btn btn-primary filter-button" data-filter="wordpress">Wordpress</button>
+        <button class="btn btn-primary filter-button" data-filter="prestashop">Prestashop</button>
+        <button class="btn btn-primary filter-button" data-filter="angular">Angular</button>
+        <button class="btn btn-primary filter-button" data-filter="maquetacion">Maquetación</button>
     </div>
 
+    <div class="btn-group w-50 " role="group" aria-label="Trabajos realizados" (click)="onButtonGroupClick($event)">
+        <button class="btn btn-primary filter-button" id = "all">Todos</button>
+        <button class="btn btn-primary filter-button" id = "wordpress">Wordpress</button>
+        <button class="btn btn-primary filter-button" id = "prestashop">Prestashop</button>
+        <button class="btn btn-primary filter-button" id = "angular">Angular</button>
+        <button class="btn btn-primary filter-button" id = "maquetacion">Maquetación</button>
+    </div>
 
-
-
+    <!--<div class="row gallery-container" *ngIf="showMainContent">-->
+    <div class="row gallery-container">
         <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter wordpress">
-            <img src="http://fakeimg.pl/365x365/" class="img-responsive">
+            <img src="assets/img/portfolio/ekkaoreka.png" class="rounded img-fluid">
         </div>
 
         <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter wordpress">
-            <img src="http://fakeimg.pl/365x365/" class="img-responsive">
+            <img src="assets/img/portfolio/urederestetika.png" class="rounded img-fluid">
         </div>
 
         <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter prestashop">
-            <img src="http://fakeimg.pl/365x365/" class="img-responsive">
+            <img src="assets/img/portfolio/ekkaoreka.png" class="rounded img-fluid">
         </div>
 
         <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter prestashop">
-            <img src="http://fakeimg.pl/365x365/" class="img-responsive">
+            <img src="http://fakeimg.pl/365x365/" class="rounded img-fluid">
         </div>
 
         <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter angular">
-            <img src="http://fakeimg.pl/365x365/" class="img-responsive">
+            <img src="http://fakeimg.pl/365x365/" class="rounded img-fluid">
         </div>
 
         <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter maquetacion">
-            <img src="http://fakeimg.pl/365x365/" class="img-responsive">
+            <img src="http://fakeimg.pl/365x365/" class="rounded img-fluid">
         </div>
 
         <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter maquetacion">
-            <img src="http://fakeimg.pl/365x365/" class="img-responsive">
+            <img src="http://fakeimg.pl/365x365/" class="rounded img-fluid">
         </div>
 
         <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter maquetacion">
-            <img src="http://fakeimg.pl/365x365/" class="img-responsive">
+            <img src="http://fakeimg.pl/365x365/" class="rounded img-fluid">
         </div>
 
         <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter maquetacion">
-            <img src="http://fakeimg.pl/365x365/" class="img-responsive">
+            <img src="http://fakeimg.pl/365x365/" class="rounded img-fluid">
         </div>
 
         <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter maquetacion">
-            <img src="http://fakeimg.pl/365x365/" class="img-responsive">
+            <img src="http://fakeimg.pl/365x365/" class="rounded img-fluid">
         </div>
 
         <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter angular">
-            <img src="http://fakeimg.pl/365x365/" class="img-responsive">
+            <img src="http://fakeimg.pl/365x365/" class="rounded img-fluid">
         </div>
 
         <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter angular">
-            <img src="http://fakeimg.pl/365x365/" class="img-responsive">
+            <img src="http://fakeimg.pl/365x365/" class="rounded img-fluid">
         </div>
 
-
+    </div>
 </div>
 
 <!--
