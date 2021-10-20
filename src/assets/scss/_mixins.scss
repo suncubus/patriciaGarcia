@@ -1,0 +1,26 @@
+/*Contenedor full screen*/
+@mixin full-screen{
+    width: $w-vw;
+    height: $h-vh;
+}
+/*Prefijos a las transiciones*/
+@mixin transform($transforms) {
+    -moz-transform: $transforms;
+    -o-transform: $transforms;
+    -ms-transform: $transforms;
+    -webkit-transform: $transforms;
+    transform: $transforms;
+} 
+/*Parpadeo*/
+@mixin txt-blink() {
+    text-decoration: blink;
+	-webkit-animation-name: blinker;
+	-webkit-animation-duration: 0.5s;
+	-webkit-animation-iteration-count:infinite;
+	-webkit-animation-timing-function:ease-in-out;
+	-webkit-animation-direction: alternate;
+    @keyframes blinker {
+        from {opacity: 1.0;}
+        to {opacity: 0.0;}
+    }
+}

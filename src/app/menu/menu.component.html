@@ -1,0 +1,69 @@
+<div id="particle-container">
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+</div>
+
+<main class="min-vh-100">
+  <div class="position-absolute top-50 start-50 translate-middle profile">    
+    <cite class="fw-bold text-dark">"Elige un trabajo que te guste y  no volverás a trabajar ningún día de tu vida."</cite>
+    <p class="text-end fs-6">Confuncio</p>
+  </div>
+  <input type="checkbox" id="myInput">
+  <label for="myInput">
+      <span class="bar top"></span>
+      <span class="bar middle"></span>
+      <span class="bar bottom"></span>
+  </label>
+  <aside>
+    <div class="aside-section aside-left d-flex align-items-center">
+      <div class="aside-content">
+        <img src="../../assets/img/logo_fondo_opt.png" >        
+          <p class="fw-bold text-center">Desarrolladora Front-end</p>
+          <p class="text-justify">Soy una apasionada de la tecnología e intento estar al día de todo lo relacionado con la web. Esta pasión me lleva a ser curiosa, a investigar, a no cerrar los ojos e intentar comprender lo nuevo, a querer saber y hacer.</p>
+          <div class="text-center">            
+            <div class="btn-group btn-group-lg" role="group" aria-label="Redes Sociales y Contacto">
+              <button type="button" class="btn btn-primary text-white" (click) = "goLink('https://www.linkedin.com/in/patrigarcia/')"><fa-icon [icon]="faLinkedin"></fa-icon></button>
+              <button type="button" class="btn btn-primary text-white" (click) = "goLink('https://github.com/suncubus')"><fa-icon [icon]="faGithub"></fa-icon></button>
+              <button type="button" class="btn btn-primary text-white" routerLink = "/contacto" fragment="contactoId"><fa-icon [icon]="faEnvelope"></fa-icon></button>
+            </div>
+          </div>
+      </div>
+    </div>
+    <div class="aside-section aside-right d-flex align-items-center">
+      <ul class="aside-list">
+        <li><a routerLink = "/sobremi" fragment="sobremiId" class="aside-anchor">HABILIDADES</a></li>
+        <li><a routerLink = "/curriculum" fragment="curriculumId" class="aside-anchor">TRAYECTORIA</a></li>
+        <li><a routerLink = "/portfolio" fragment="portfolioId" class="aside-anchor">PORTFOLIO</a></li>
+        <li><a routerLink = "/contacto" fragment="contactoId" class="aside-anchor">CONTACTO</a></li>
+      </ul>
+    </div>
+  </aside>
+</main>

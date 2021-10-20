@@ -1,0 +1,50 @@
+@import "../../assets/scss/variables";
+@import "../../assets/scss/mixins";
+
+#contactForm{
+    position:relative;
+}
+#planeSvg{
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    z-index: 5;
+    top:0;    
+}
+.planePath {
+	opacity: 0.2;
+    stroke: #D9DADA;
+    stroke-width: .2%;
+    stroke-dasharray: 2%;
+    fill: none;
+}
+.plane {
+	transform: scale(0.3);
+
+}
+
+//cambiar colores avion
+.fill1 {
+ fill: #fbdcac;
+}
+.fill2 {
+ fill: #fdce85;
+}
+.fill3 {
+ fill: #febf5e;
+}
+.fill4 {
+ fill: #ffaf34 ;
+}
+//control animación
+.animPlay{
+    animation-play-state: running;
+}
+.animStop{
+    animation-play-state: paused;
+}
+//mensaje enviado
+#succesMail{
+    bottom:0;
+    @include txt-blink;
+}

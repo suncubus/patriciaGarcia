@@ -1,0 +1,40 @@
+{
+  
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
+    "forceConsistentCasingInFileNames": true,
+    "strict": false,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "sourceMap": true,
+    "declaration": false,
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "target": "es2017",
+    "module": "es2020",
+    "typeRoots": ["node_modules/@types"],
+    "lib": ["es2018","dom"],
+    "paths":{
+      "api-ai-javascript/*":["node_modules/api-ai-javascript/es6/*"]
+    }
+  },
+  "angularCompilerOptions": {
+        "strictTemplates": true,
+        "fullTemplateTypeCheck": true,
+        "annotateForClosureCompiler": true,
+        "strictInjectionParameters": true,
+        "skipTemplateCodegen": false,
+        "preserveWhitespaces": true,
+        "skipMetadataEmit": false,
+        "disableTypeScriptVersionCheck": true
+      
+    }
+    
+  }  
+/* To learn more about this file see: https://angular.io/config/tsconfig.*/
+
+  

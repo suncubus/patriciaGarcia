@@ -1,0 +1,51 @@
+/*normalize*/
+@import "./assets/scss/normalize";
+
+/* Personalizar colores boodstrap */
+@import "./assets/scss/variables";
+@import "./assets/scss/mixins";
+@import '../node_modules/bootstrap/scss/bootstrap';
+
+/*popover*/
+@import '../node_modules/bootstrap/scss/popover';
+
+@import "./assets/scss/portfolio.scss";
+
+/*Resetea todos los estilos del navegador */
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+/*Estilos propios*/
+body {
+   font-family: $font-general;
+} 
+h1{
+    font-family: $font-logo;
+    margin: 2rem auto;
+}
+/*Espaciado*/
+.paragraph-1{
+    margin: 1rem;
+}
+/*popover*/
+.popover {
+    border: 0.2rem solid $sun;    
+    margin: .5rem;
+    height: max-content;
+    .popover-header{
+        background-color: $sun;
+        color: $bottle;
+        border-top-left-radius: 0; 
+        border-top-right-radius: 0;
+    }
+    .popover-body{
+        font-size:$font-size-max-sm;
+        color: $bottle;
+    }
+    .arrow{
+        display:none;
+    }
+    
+}

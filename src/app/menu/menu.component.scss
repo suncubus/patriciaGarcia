@@ -1,0 +1,179 @@
+@import "../../assets/scss/variables";
+@import "../../assets/scss/mixins";
+
+/*fondo particulas*/
+
+//crear particulas
+.particle {
+	position: absolute;
+	border-radius: 50%;
+}
+
+//color aleatorio de mi array
+$colors: $bottle, $meat, $tile, $egg, $sun, $pig;
+
+@mixin backgrounds($c) {
+	@for $i from 1 through 30 {		
+	  $k: 10%;	  	  
+	  @if nth-child(even)  {
+		&:nth-child(#{$i}) { background: darken($c, $k)}		
+	  } @else {
+		&:nth-child(#{$i}) { background: lighten($c, $k)}
+	  }
+	}
+}
+$size: 0 px;	 
+@for $i from 1 through 30 {
+	@if nth-child(even) {
+		$size: random(100) + 40 + px;	
+	} @else {
+		$size: random(100) + 5 + px;
+	}
+	.particle:nth-child(#{$i}){
+	  animation: particle-animation-#{$i} 60s infinite;
+  	  opacity: random(100)/100;
+	  height: $size;
+	  width: $size;
+	  animation-delay: -$i * .2s;
+	  @include transform(translate3d((random(90) * 1vw), (random(90) * 1vh), (random(100) * 1px)));
+
+	  //color aleatorio
+	  $key: random( length($colors) );
+	  $nth: nth( $colors, $key );
+      $main-color: $nth !default;
+	  @include backgrounds($main-color);	  
+	}
+	//animacion
+	@keyframes particle-animation-#{$i} {
+		100% {
+			@include transform(translate3d((random(90) * 1vw), (random(90) * 1vh), (random(100) * 1px)));
+		}
+	}
+}
+/*cita*/
+.profile{
+	background: rgba(255, 175, 52, .6);
+	border-radius: 2rem;
+	padding: 2rem;
+}
+/*MENU*/  
+main {
+	position: relative;
+	overflow: hidden;
+}  
+.aside-section {
+	top: 0;
+	bottom: 0;
+	position: absolute;
+
+} 
+.aside-left {
+	width: 40%;
+	left: 0;
+	background-color: $white;
+	@include transform(translateY(-100%));
+	transition: transform 0.4s ease-in-out;
+	.aside-content {
+		position: relative;
+		color: $bottle;
+		img{
+			width: content;
+			display: block;
+			margin: 1rem auto;
+		}
+		p{	
+			margin: 1rem;
+		}
+	}
+}
+.aside-right {
+	width: 60%;
+	right: 0;
+	background-color: $pig;
+	@include transform(translateX(100%));
+	transition: transform 0.4s ease-in-out;
+	ul li {
+		list-style: none;
+		margin-bottom: 2rem; 		
+		a{
+			padding-bottom: .6rem;			
+			color: $white;
+			text-decoration: none;
+			font-size: 2rem;
+			position: relative;
+			font-weight: 500;
+			&::after, &::before{
+				content: "";
+				position: absolute;
+				bottom: 0;
+				border-radius: 3px;
+				height: 3px;
+				left: 0;
+			} 
+			&::after {
+				background-color: $bottle;
+				right: 0;
+			}  
+			&::before {
+				background-color: $white;
+				z-index: 1;
+				width: 50%;	
+				-webkit-transition: transform 0.2s ease-in-out;
+				-o-transition: transform 0.2s ease-in-out;
+				transition: transform 0.2s ease-in-out;
+			}
+			&:hover:before {
+				@include transform(translateX(100%));
+			}
+		}
+	} 	
+}  
+/*HAMBURGUESA*/
+$barSize: 30px;  
+
+input[type="checkbox"] {
+	display: none;
+	&:checked ~ aside .aside-left {
+		@include transform(translateY(0%));
+	}
+	&:checked ~ aside .aside-right {
+		@include transform(translateX(0%));
+	}
+	&:checked ~ label .bar {
+		background-color: $bottle;
+		width: $barSize;
+	}
+	&:checked ~ label .top {
+		@include transform(translateY(0px) rotateZ(45deg));
+	}
+	&:checked ~ label .bottom {
+		@include transform(translateY(-15px) rotateZ(-45deg));
+	}
+	&:checked ~ label .middle {
+		width: 0;
+		margin: 0 auto;
+	  }
+}
+label {
+	top: 10px;
+	display: inline-block;
+	padding: 7px 10px;
+	background-color: transparent;
+	cursor: pointer;
+	margin: 10px;
+	z-index: 3;
+	position:relative;
+}
+.bar {
+	display: block;
+	background-color: $bottle;
+	width: $barSize;
+	height: 3px;
+	border-radius: 5px;
+	margin: 5px auto;
+	transition: background-color 0.4s ease-in, transform 0.4s ease-in, width 0.4s ease-in;
+}  
+.top, .bottom{
+	width: $barSize /2 ;
+}
+
